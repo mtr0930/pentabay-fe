@@ -3,42 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
       <div className="bg-white">
-        <header className="bg-[#f8f9fa] p-4">
-          <div className="container mx-auto flex items-center justify-between">
-            <a className="flex items-center space-x-2" href="#">
-              <Image
-                alt="Penta Bay logo"
-                className="h-10 w-10"
-                height="40"
-                src="/pentabay_logo.svg"
-                style={{
-                  aspectRatio: "40/40",
-                  objectFit: "fill",
-                }}
-                width="40"
-              />
-              <span className="text-xl font-bold">Penta BAY</span>
-            </a>
-            <nav className="flex space-x-4">
-              <a className="text-sm font-semibold text-gray-700 hover:text-gray-900" href="#">
-                HOME
-              </a>
-              <a className="text-sm font-semibold text-gray-700 hover:text-gray-900" href="#">
-                GENERAL TRADE
-              </a>
-              <a className="text-sm font-semibold text-gray-700 hover:text-gray-900" href="#">
-                PROJECTS
-              </a>
-              <a className="text-sm font-semibold text-gray-700 hover:text-gray-900" href="#">
-                ABOUT US
-              </a>
-              <a className="text-sm font-semibold text-gray-700 hover:text-gray-900" href="#">
-                CONTACT
-              </a>
-            </nav>
-          </div>
-        </header>
-        <main>
           <section className="relative">
             <Image
               alt="Skyscrapers"
@@ -106,7 +70,7 @@ export default function Home() {
                   }}
                   width="600"
                 />
-                <h2 className="text-2xl font-bold">PROJECTS</h2>
+                <h2 className="text-2xl font-bold">PROJECT</h2>
                 <p>
                   Penta Bay has extensive experience across all industries. Our highly customized teams bring each client
                   a combination of deep industry knowledge and expert perspectives from other industries on the challenge
@@ -168,35 +132,6 @@ export default function Home() {
               </form>
             </div>
           </section>
-        </main>
-        <footer className="bg-[#f8f9fa] p-4">
-          <div className="container mx-auto grid grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-bold">TRADE GENERAL</h3>
-              <ul className="space-y-1 text-sm">
-                <li>Crude Oil</li>
-                <li>Refined Product & Energy</li>
-                <li>Bulk Materials</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold">PROJECTS</h3>
-              <ul className="space-y-1 text-sm">
-                <li>Petro Chemicals</li>
-                <li>Steel</li>
-                <li>Power</li>
-                <li>Private Equity</li>
-                <li>Oil, Gas & Energy</li>
-                <li>Power</li>
-                <li>ICT & Telecommunications</li>
-                <li>Technology Development</li>
-                <li>Consumer Market</li>
-                <li>Healthcare</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center text-sm py-4">© 2023 by Penta Bay Co.,LTD</div>
-        </footer>
       </div> 
   );
 }
