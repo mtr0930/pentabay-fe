@@ -28,7 +28,7 @@ function NavbarDesktop() {
                 {routes.map((route) => {
                     const { title, href } = route;
                     return (
-                        <Link className="text-sm font-semibold text-gray-700 hover:text-gray-900" href={href}>
+                        <Link key={title} className="text-sm font-semibold text-gray-700 hover:text-gray-900" href={href}>
                             {title}
                         </Link>
                     )
@@ -66,7 +66,7 @@ function NavbarMobile() {
             <ul className="block pl-0 mb-0">
                 {routes.map((route) => {
                     return (
-                        <li>
+                        <li key={route.title}>
                             <Link href={route.href} className="block cursor-pointer py-1.5 px-4  hover:text-gray-400 font-medium">
                                 {route.title}
                             </Link>
