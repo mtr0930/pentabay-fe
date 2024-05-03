@@ -5,10 +5,11 @@ import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
+import { motion, AnimatePresence } from "framer-motion"
 
 function NavbarDesktop() {
     return (
-        <header className="bg-[#f8f9fa] p-4">
+        <header className="bg-[#f8f9fa] p-4 fixed top-0 left-0 right-0 z-10">
           <div className="container flex mx-auto items-center justify-between">
             <Link className="flex items-center space-x-2" href="#">
               <Image
@@ -43,7 +44,7 @@ function NavbarMobile() {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <header className="bg-[#f8f9fa] p-4">
+        <header className="bg-[#f8f9fa] p-4 fixed top-0 left-0 right-0 z-10">
         <div className="container mx-auto flex items-center justify-between">
           <Link className="flex items-center space-x-2" href="#">
             <Image
@@ -59,11 +60,14 @@ function NavbarMobile() {
             />
             <span className="text-xl font-bold">Penta BAY</span>
           </Link>
-          <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+          <Hamburger toggled={isOpen} size={20} toggle={setOpen}/>
         </div>
-        <div className="container mx-auto">
+        <AnimatePresence>
+        <div className="mx-auto bg-[#f8f9fa]">
         {isOpen && (
-            <ul className="block pl-0 mb-0">
+            <motion.ul initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="bg-[#f8f9fa] fixed inset-0 z-50 grid gap-6 items-center justify-center max-w-4xl p-8 backdrop-blur-sm transition-all duration-300 ease-in-out">
                 {routes.map((route) => {
                     return (
                         <li key={route.title}>
@@ -73,9 +77,10 @@ function NavbarMobile() {
                         </li>
                     )
                 })}
-            </ul>
+            </motion.ul>
         )}
         </div>
+        </AnimatePresence>
       </header>
     )
 }

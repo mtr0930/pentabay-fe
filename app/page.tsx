@@ -1,9 +1,11 @@
+'use client'
 import Image from "next/image";
+import Slider from "./slider";
 
 export default function Home() {
   return (
-      <div className="bg-white">
-          <section className="relative">
+      <div className="bg-white mt-16">
+          {/* <section className="relative">
             <Image
               alt="Skyscrapers"
               className="w-full h-auto"
@@ -34,9 +36,10 @@ export default function Home() {
                 DELIVERS PERFORMANCE EXCELLENCE
               </p>
             </div>
-          </section>
+          </section> */}
+          <Slider/>
           <section className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="gap-8 block">
               <div className="space-y-4">
                 <Image
                   alt="General Trade"
