@@ -5,7 +5,9 @@ import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Dropdown from "./dropdown";
 
 function NavbarDesktop() {
     return (
@@ -27,12 +29,14 @@ function NavbarDesktop() {
             </Link>
             <nav className="flex space-x-4">
                 {routes.map((route) => {
-                    const { title, href } = route;
-                    return (
-                        <Link key={title} className="text-sm font-semibold text-gray-700 hover:text-gray-900" href={href}>
-                            {title}
-                        </Link>
-                    )
+                    const { title, href, subroutes } = route;
+                    return subroutes && subroutes.length > 0 ? (
+                      <Dropdown key={route.title} route={route} />
+                    ) : (
+                      <Link key={title} className="text-sm font-semibold text-gray-700 hover:text-gray-900" href={href}>
+                        {title}
+                      </Link>
+                    );
                 })}
             </nav>
           </div>

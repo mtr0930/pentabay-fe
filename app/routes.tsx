@@ -6,10 +6,38 @@ export const routes = [
     {
         title: "GENERAL TRADE",
         href: "#",
+        subroutes: [
+            {
+                title: "Crude Oil",
+                href: '#'
+            },
+            {
+                title: "Refined Products & Energy",
+                href: '#'
+            },
+            {
+                title: "Bulk Materials",
+                href: '#'
+            },
+            {
+                title: "Petro Chemicals",
+                href: '#'
+            },
+        ]
     },
     {
         title: "PROJECT",
         href: "#",
+        subroutes: [
+            {
+                title: "Oil, Gas & Energy",
+                href: '#'
+            },
+            {
+                title: "Power",
+                href: '#'
+            },
+        ]
     },
     {
         title: "ABOUT US",

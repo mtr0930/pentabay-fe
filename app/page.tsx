@@ -5,38 +5,6 @@ import Slider from "./slider";
 export default function Home() {
   return (
       <div className="bg-white mt-16">
-          {/* <section className="relative">
-            <Image
-              alt="Skyscrapers"
-              className="w-full h-auto"
-              height="600"
-              src="/skyscraper.jpg"
-              style={{
-                aspectRatio: "1440/600",
-                objectFit: "cover",
-              }}
-              width="1440"
-            />
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-              <Image
-                alt="Penta Bay logo"
-                className="h-20 w-20"
-                height="80"
-                src="/pentabay_logo.svg"
-                style={{
-                  aspectRatio: "80/80",
-                  objectFit: "fill",
-                }}
-                width="80"
-              />
-              <h1 className="text-4xl font-bold text-white">Penta BAY</h1>
-              <p className="text-lg text-white mt-2 text-center">
-                YOUR TRUSTWORTHY PARTNER
-                <br />
-                DELIVERS PERFORMANCE EXCELLENCE
-              </p>
-            </div>
-          </section> */}
           <Slider/>
           <section className="container mx-auto px-4 py-8">
             <div className="gap-8 block">
