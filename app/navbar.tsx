@@ -1,19 +1,25 @@
 'use client'
-import Image from "next/image";
-import {routes} from "./routes";
-import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
-import Hamburger from "hamburger-react";
-import { motion, AnimatePresence } from "framer-motion";
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Dropdown from "./dropdown";
+import Image from "next/image";
+import { JSX, SVGProps, useState } from "react";
+import React from 'react';
 
-function NavbarDesktop() {
-    return (
-        <header className="bg-[#f8f9fa] p-4 fixed top-0 left-0 right-0 z-10">
-          <div className="container flex mx-auto items-center justify-between">
-            <Link className="flex items-center space-x-2" href="#">
+
+
+export default function NavBar() {
+  const [isClick, setIsClick] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsClick(!isClick);
+  }
+
+  return (
+    <>
+    <nav className="bg-white fixed top-0 left-0 right-0 z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center space-x-2">
+          <Link className="flex items-center space-x-2" href="#">
               <Image
                 alt="Penta Bay logo"
                 className="h-10 w-10"
@@ -27,80 +33,121 @@ function NavbarDesktop() {
               />
               <span className="text-xl font-bold">Penta BAY</span>
             </Link>
-            <nav className="flex space-x-4">
-                {routes.map((route) => {
-                    const { title, href, subroutes } = route;
-                    return subroutes && subroutes.length > 0 ? (
-                      <Dropdown key={route.title} route={route} />
-                    ) : (
-                      <Link key={title} className="text-sm font-semibold text-gray-700 hover:text-gray-900" href={href}>
-                        {title}
-                      </Link>
-                    );
-                })}
-            </nav>
           </div>
-        </header>
-    )
-}
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center space-x-4 font-bold">
+              <a href="/" className=" group text-black transition duration-300">HOME<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/" className=" group text-black transition duration-300">GENERAL TRADE<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/" className=" group text-black transition duration-300">PROJECT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/" className=" group text-black transition duration-300">ABOUT US<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/" className=" group text-black transition duration-300">CONTACT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+            </div>
 
-function NavbarMobile() {
-    const [isOpen, setOpen] = useState(false);
-
-    return (
-        <header className="bg-[#f8f9fa] p-4 fixed top-0 left-0 right-0 z-10">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link className="flex items-center space-x-2" href="#">
-            <Image
-              alt="Penta Bay logo"
-              className="h-10 w-10"
-              height="40"
-              src="/pentabay_logo.svg"
-              style={{
-                aspectRatio: "40/40",
-                objectFit: "fill",
-              }}
-              width="40"
-            />
-            <span className="text-xl font-bold">Penta BAY</span>
-          </Link>
-          <Hamburger toggled={isOpen} size={20} toggle={setOpen}/>
+          </div>
+        <div className="md:hidden flex items-center">
+          <button className="inline-flex items-center justify-center p-2 rounded-md text-black md:text-black 
+          hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
+          onClick={toggleNavbar}>
+            {isClick ? (
+              <svg  className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor" >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"/>
+</svg>
+            ) : (
+              <svg  className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"/>
+</svg>
+            )}
+          </button>
         </div>
-        <AnimatePresence>
-        <div className="mx-auto bg-[#f8f9fa]">
-        {isOpen && (
-            <motion.ul initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="bg-[#f8f9fa] fixed inset-0 z-50 grid gap-6 items-center justify-center max-w-4xl p-8 backdrop-blur-sm transition-all duration-300 ease-in-out">
-                {routes.map((route) => {
-                    return (
-                        <li key={route.title}>
-                            <Link href={route.href} className="block cursor-pointer py-1.5 px-4  hover:text-gray-400 font-medium">
-                                {route.title}
-                            </Link>
-                        </li>
-                    )
-                })}
-            </motion.ul>
+        </div>
+      </div>
+        {isClick && (
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-right font-bold">
+              <a href="/" className=" group block text-black transition duration-300">HOME</a>
+              <a href="/" className=" group block text-black transition duration-300">GENERAL TRADE</a>
+              <a href="/" className=" group block text-black transition duration-300">PROJECT</a>
+              <a href="/" className=" group block text-black transition duration-300">ABOUT US</a>
+              <a href="/" className=" group block text-black transition duration-300">CONTACT</a>
+          </div>
         )}
-        </div>
-        </AnimatePresence>
-      </header>
-    )
+    </nav>
+    </>
+  )
 }
 
-export default function Navbar() {
-    const isDesktop = useMediaQuery({
-        query: "(min-width: 1024px)"
-    })
+function ChevronDownIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  )
+}
 
-    const [desktop, setDesktop] = useState(false);
 
-    useEffect(() => {
-        setDesktop(isDesktop)
-    }, [isDesktop])
+function ChevronRightIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  )
+}
 
-    return (
-        desktop ? <NavbarDesktop/> : <NavbarMobile/>
-    )
+
+function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  )
 }
