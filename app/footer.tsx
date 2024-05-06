@@ -1,7 +1,7 @@
 export default function Footer(){
     return (
         <footer className="bg-[#f8f9fa] p-4">
-          <div className="container mx-auto grid grid-cols-2 gap-8">
+          <div className="container mx-auto grid grid-cols-2 gap-8 max-w-7xl px-10">
             <div>
               <h3 className="font-bold">TRADE GENERAL</h3>
               <ul className="space-y-1 text-sm">
@@ -26,7 +26,7 @@ export default function Footer(){
               </ul>
             </div>
           </div>
-          <div className="text-center text-sm py-4">© 2023 by Penta Bay Co.,LTD</div>
+          <div className="text-center text-sm py-4 max-w-7xl mx-auto">© 2023 by Penta Bay Co.,LTD</div>
         </footer>
     )
 }

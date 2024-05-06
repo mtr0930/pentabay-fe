@@ -6,7 +6,7 @@ export default function Home() {
   return (
       <div className="bg-white mt-16">
           <Slider/>
-          <section className="container mx-auto px-4 py-8">
+          <section className="container mx-auto px-4 py-8 max-w-7xl">
             <div className="gap-8 block">
               <div className="space-y-4">
                 <Image
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </section>
           <section className="bg-gray-100">
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
               <div className="space-y-4">
                 <Image
                   alt="About Us"
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="container mx-auto px-4 py-8">
+          <section className="container mx-auto px-4 py-8 max-w-7xl">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold">CONTACT</h2>
               <div className="space-y-2">

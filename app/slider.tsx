@@ -27,7 +27,7 @@ export default function Slider() {
           clickable: true,
         }}
         modules={[EffectFade, Pagination]}
-        className="mySwiper"
+        className="mySwiper  max-w-7xl"
       >
         <SwiperSlide>
         <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
