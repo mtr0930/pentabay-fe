@@ -5,7 +5,7 @@ export const routes = [
     },
     {
         title: "GENERAL TRADE",
-        href: "#",
+        href: "/generaltrade",
         subroutes: [
             {
                 title: "Crude Oil",
@@ -21,6 +21,10 @@ export const routes = [
             },
             {
                 title: "Petro Chemicals",
+                href: '#'
+            },
+            {
+                title: "Steel",
                 href: '#'
             },
         ]

@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <>
-    <nav className="bg-white fixed top-0 left-0 right-0 z-10">
+    <nav className="bg-white fixed top-0 left-0 right-0 z-10 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
@@ -37,8 +37,8 @@ export default function NavBar() {
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4 font-bold">
               <a href="/" className=" group text-black transition duration-300">HOME<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
-              <a href="/" className=" group text-black transition duration-300">GENERAL TRADE<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
-              <a href="/" className=" group text-black transition duration-300">PROJECT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/generaltrade" className=" group text-black transition duration-300">GENERAL TRADE<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/project" className=" group text-black transition duration-300">PROJECT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
               <a href="/" className=" group text-black transition duration-300">ABOUT US<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
               <a href="/" className=" group text-black transition duration-300">CONTACT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
             </div>
@@ -80,8 +80,8 @@ export default function NavBar() {
         {isClick && (
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-right font-bold">
               <a href="/" className=" group block text-black transition duration-300">HOME</a>
-              <a href="/" className=" group block text-black transition duration-300">GENERAL TRADE</a>
-              <a href="/" className=" group block text-black transition duration-300">PROJECT</a>
+              <Link href="/generaltrade" className=" group block text-black transition duration-300">GENERAL TRADE</Link>
+              <a href="/project" className=" group block text-black transition duration-300">PROJECT</a>
               <a href="/" className=" group block text-black transition duration-300">ABOUT US</a>
               <a href="/" className=" group block text-black transition duration-300">CONTACT</a>
           </div>
