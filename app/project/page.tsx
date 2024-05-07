@@ -10,15 +10,15 @@ export default function Page() {
       <div className="container px-4 md:px-6 max-h-max">
         <div className="space-y-6 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Expertise</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Project</h2>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               We have a deep understanding of various industries and can help you achieve your goals.
             </p>
           </div>
         </div>
         <div className="mt-12 rounded-lg border">
-          <Tabs.Root className=" w-auto flex justify-between" defaultValue="oil-gas">
-            <Tabs.List className=" w-1/3 border-b break-words" aria-orientation='vertical'>
+          <Tabs.Root className=" flex-grow-0 flex justify-between" defaultValue="oil-gas">
+            <Tabs.List className=" border-b break-words" aria-orientation='vertical'>
               <Tabs.Trigger value="oil-gas" className="TabsTrigger block w-full px-1 py-1">Oil, Gas & Energy</Tabs.Trigger>
               <Tabs.Trigger value="power" className="TabsTrigger block w-full px-1 py-1">Power</Tabs.Trigger>
               <Tabs.Trigger value="private-equity" className="TabsTrigger block w-full px-1 py-1">Private Equity</Tabs.Trigger>
@@ -138,9 +138,8 @@ export default function Page() {
             <Tabs.Content className="p-6 sm:p-8 overflow-hidden" value="ict">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
                 <Card >
-                  
-                    <h3 className="text-lg font-semibold ">Telecommunications</h3>
-                    <p className="mt-2 text-gray-500 dark:text-gray-400 ">
+                    <h3 className="text-lg font-semibold">Telecommunications</h3>
+                    <p className="mt-2 text-gray-500 dark:text-gray-400">
                       We have expertise in the telecommunications industry, including network infrastructure and
                       services.
                     </p>

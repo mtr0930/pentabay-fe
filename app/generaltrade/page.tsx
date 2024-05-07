@@ -5,7 +5,7 @@ export default function Page() {
       <section className="w-full py-12 md:py-24 lg:py-32 container mx-auto px-4 py-8 max-w-7xl">
         <div className="container grid gap-6 md:gap-8 px-4 md:px-6">
           <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Our Trade Expertise</h2>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">General Trade</h2>
             <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               Discover our diverse trade capabilities across key commodity sectors.
             </p>
