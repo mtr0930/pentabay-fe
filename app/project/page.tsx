@@ -17,16 +17,16 @@ export default function Page() {
           </div>
         </div>
         <div className="mt-12 rounded-lg border">
-          <Tabs.Root className=" flex-grow-0 flex justify-between" defaultValue="oil-gas">
-            <Tabs.List className=" border-b break-words" aria-orientation='vertical'>
-              <Tabs.Trigger value="oil-gas" className="TabsTrigger block w-full px-1 py-1">Oil, Gas & Energy</Tabs.Trigger>
-              <Tabs.Trigger value="power" className="TabsTrigger block w-full px-1 py-1">Power</Tabs.Trigger>
-              <Tabs.Trigger value="private-equity" className="TabsTrigger block w-full px-1 py-1">Private Equity</Tabs.Trigger>
-              <Tabs.Trigger value="banking" className="TabsTrigger block w-full px-1 py-1">Banking & Capital Market</Tabs.Trigger>
-              <Tabs.Trigger value="ict" className="TabsTrigger block w-full px-1 py-1">ICT & Telecommunications</Tabs.Trigger>
-              <Tabs.Trigger value="technology" className="TabsTrigger block w-full px-1 py-1">Technology Development</Tabs.Trigger>
-              <Tabs.Trigger value="consumer" className="TabsTrigger block w-full px-1 py-1">Consumer Market</Tabs.Trigger>
-              <Tabs.Trigger value="healthcare" className="TabsTrigger block w-full px-1 py-1">Healthcare</Tabs.Trigger>
+          <Tabs.Root className="block" defaultValue="oil-gas">
+            <Tabs.List className=" border-b break-words" aria-orientation='horizontal'>
+              <Tabs.Trigger value="oil-gas" className="TabsTrigger px-1 py-1">Oil, Gas & Energy</Tabs.Trigger>
+              <Tabs.Trigger value="power" className="TabsTrigger px-1 py-1">Power</Tabs.Trigger>
+              <Tabs.Trigger value="private-equity" className="TabsTrigger  px-1 py-1">Private Equity</Tabs.Trigger>
+              <Tabs.Trigger value="banking" className="TabsTrigger px-1 py-1">Banking & Capital Market</Tabs.Trigger>
+              <Tabs.Trigger value="ict" className="TabsTrigger px-1 py-1">ICT & Telecommunications</Tabs.Trigger>
+              <Tabs.Trigger value="technology" className="TabsTrigger  px-1 py-1">Technology Development</Tabs.Trigger>
+              <Tabs.Trigger value="consumer" className="TabsTrigger px-1 py-1">Consumer Market</Tabs.Trigger>
+              <Tabs.Trigger value="healthcare" className="TabsTrigger px-1 py-1">Healthcare</Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content className="p-6 sm:p-8 overflow-hidden over" value="oil-gas">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

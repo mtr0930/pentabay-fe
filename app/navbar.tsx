@@ -39,8 +39,8 @@ export default function NavBar() {
               <a href="/" className=" group text-black transition duration-300">HOME<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
               <a href="/generaltrade" className=" group text-black transition duration-300">GENERAL TRADE<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
               <a href="/project" className=" group text-black transition duration-300">PROJECT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
-              <a href="/" className=" group text-black transition duration-300">ABOUT US<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
-              <a href="/" className=" group text-black transition duration-300">CONTACT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/aboutus" className=" group text-black transition duration-300">ABOUT US<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
+              <a href="/contact" className=" group text-black transition duration-300">CONTACT<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span></a>
             </div>
 
           </div>
@@ -82,8 +82,8 @@ export default function NavBar() {
               <a href="/" className=" group block text-black transition duration-300">HOME</a>
               <Link href="/generaltrade" className=" group block text-black transition duration-300">GENERAL TRADE</Link>
               <a href="/project" className=" group block text-black transition duration-300">PROJECT</a>
-              <a href="/" className=" group block text-black transition duration-300">ABOUT US</a>
-              <a href="/" className=" group block text-black transition duration-300">CONTACT</a>
+              <a href="/aboutus" className=" group block text-black transition duration-300">ABOUT US</a>
+              <a href="/contact" className=" group block text-black transition duration-300">CONTACT</a>
           </div>
         )}
     </nav>
