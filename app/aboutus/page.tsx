@@ -181,7 +181,7 @@ function CodeIcon(props:any) {
 }
 
 
-function GaugeIcon(props) {
+function GaugeIcon(props:any) {
   return (
     <svg
       {...props}
