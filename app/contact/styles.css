@@ -86,7 +86,7 @@ button {
   color: black;
   box-shadow: 0 2px 10px var(--black-a7);
 }
-button:hover {
+.submit-button:hover {
   background-color: black;
   color: white;
   cursor:pointer;
