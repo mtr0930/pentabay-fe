@@ -1,8 +1,11 @@
 'use client';
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
-
-const MenuOverlay = ({ navbarOpen, setNavbarOpen }) => {
+interface NavbarProps {
+    navbarOpen: boolean;
+    setNavbarOpen: any;
+}
+const MenuOverlay = ({ navbarOpen, setNavbarOpen }:NavbarProps) => {
     const router = useRouter();
     return (
         <nav
