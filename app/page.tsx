@@ -1,10 +1,12 @@
 'use client'
 import Image from "next/image";
 import Slider from "./slider";
+import NavBar from "./navbar";
+import Footer from "./footer";
 
 export default function Home() {
   return (
-      <div className="bg-white mt-16">
+    <div className="bg-white mt-16">
           <Slider/>
           <section className="container mx-auto px-4 py-8 max-w-7xl">
             <div className="gap-8 block">
@@ -103,6 +105,6 @@ export default function Home() {
               </form>
             </div>
           </section>
-      </div> 
+      </div>
   );
 }
