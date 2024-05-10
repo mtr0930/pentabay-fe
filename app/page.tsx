@@ -27,7 +27,7 @@ export default function Home() {
                   We can proudly say PENTABAY is capable to provide the optimal product solutions across all industries
                   and geographic.
                 </p>
-                <a className="text-blue-600 hover:underline" href="#">
+                <a className="text-blue-600 hover:underline" href="/generaltrade">
                   Read More
                 </a>
               </div>
@@ -49,7 +49,7 @@ export default function Home() {
                   a combination of deep industry knowledge and expert perspectives from other industries on the challenge
                   at stake, to offer our clients fresh perspectives.
                 </p>
-                <a className="text-blue-600 hover:underline" href="#">
+                <a className="text-blue-600 hover:underline" href="/project">
                   Read More
                 </a>
               </div>
@@ -74,7 +74,7 @@ export default function Home() {
                   We are designed to operate as one. We are a single global partnership united by a strong set of values,
                   focused on client impact.
                 </p>
-                <a className="text-blue-600 hover:underline" href="#">
+                <a className="text-blue-600 hover:underline" href="/aboutus">
                   Read More
                 </a>
               </div>
