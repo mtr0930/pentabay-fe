@@ -30,7 +30,7 @@ export default function Slider() {
         className="mySwiper  max-w-7xl"
       >
         <SwiperSlide>
-        <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
+        <Image alt="Skyscrapers" src="/lng-boat.png" width={1440} height={800}/>
         </SwiperSlide>
         <SwiperSlide>
         <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
