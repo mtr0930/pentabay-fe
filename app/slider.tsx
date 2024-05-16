@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from "next/image";
+import { motion } from "framer-motion"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -29,17 +30,31 @@ export default function Slider() {
         modules={[EffectFade, Pagination]}
         className="mySwiper  max-w-7xl"
       >
-        <SwiperSlide>
-        <Image alt="Skyscrapers" src="/lng-boat.png" width={1440} height={800}/>
+        <SwiperSlide className='relative'>
+        <Image alt="Skyscrapers" src="/lng-boat.jpeg" width={1024} height={1024} quality={100}/>
+        <div className="absolute overlay-bg  overlay-text text-center">
+          <div className='overlay-text fade-in'>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md">
+          Penta BAY
+        </h1>
+        <p className="mt-4 text-lg md:text-xl lg:text-2xl text-white drop-shadow-md">
+          NAVIGATING LNG INNOVATION
+        </p>
+        </div>
+      </div>
         </SwiperSlide>
-        <SwiperSlide>
-        <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
-        </SwiperSlide>
-        <SwiperSlide>
-        <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
-        </SwiperSlide>
-        <SwiperSlide>
-        <Image alt="Skyscrapers" src="/skyscraper.jpg" width={1440} height={800}/>
+        <SwiperSlide className='relative'>
+        <Image alt="Skyscrapers" src="/lng-boat.jpeg" width={1024} height={1024} quality={100}/>
+        <div className="absolute overlay-bg  overlay-text text-center">
+          <div className='overlay-text fade-in'>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md">
+          Penta BAY
+        </h1>
+        <p className="mt-4 text-lg md:text-xl lg:text-2xl text-white drop-shadow-md">
+          NAVIGATING LNG INNOVATION
+        </p>
+        </div>
+      </div>
         </SwiperSlide>
       </Swiper>
     </>
