@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 
-export default function Slider() {
+export default function OldSlider() {
   return (
     <>
       <Swiper
@@ -31,7 +31,7 @@ export default function Slider() {
         className="mySwiper  max-w-7xl"
       >
         <SwiperSlide className='relative'>
-        <Image alt="Skyscrapers" src="/lng-boat.jpeg" width={1024} height={1024} quality={100}/>
+        <Image alt="Skyscrapers" src="/lng-boat.jpg" width={1024} height={1024} quality={100}/>
         <div className="absolute overlay-bg  overlay-text text-center">
           <div className='overlay-text fade-in'>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md">
@@ -44,14 +44,14 @@ export default function Slider() {
       </div>
         </SwiperSlide>
         <SwiperSlide className='relative'>
-        <Image alt="Skyscrapers" src="/lng-boat.jpeg" width={1024} height={1024} quality={100}/>
+        <Image alt="Skyscrapers" src="/power-station.jpg" width={1024} height={1024} quality={100}/>
         <div className="absolute overlay-bg  overlay-text text-center">
           <div className='overlay-text fade-in'>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md">
-          Penta BAY
+        <h1 className="text-3xl  font-bold text-white drop-shadow-md">
+        Complete Solutions
         </h1>
         <p className="mt-4 text-lg md:text-xl lg:text-2xl text-white drop-shadow-md">
-          NAVIGATING LNG INNOVATION
+        From Supply Chain to Energy Production
         </p>
         </div>
       </div>

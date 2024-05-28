@@ -1,13 +1,11 @@
 'use client'
 import Image from "next/image";
-import Slider from "./slider";
-import NavBar from "./navbar";
-import Footer from "./footer";
+import { Slider } from "@/components/component/slider";
 
 export default function Home() {
   return (
     <div className="bg-white mt-16">
-          <Slider/>
+        <Slider/>
           <section className="container mx-auto px-4 py-8 max-w-7xl">
             <div className="gap-8 block">
               <div className="space-y-4">

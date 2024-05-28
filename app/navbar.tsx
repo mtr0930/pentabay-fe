@@ -17,7 +17,6 @@ const NavbarMobile = () => {
             className="top-0 right-0 z-20 relative w-10 h-10 text-white focus:outline-none inline-flex items-center justify-center"
             onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                   <span
                   className={`absolute h-0.5 w-5 bg-black transform transition duration-300 ease-in-out ${
                       navbarOpen ? "rotate-45 delay-200" : "-translate-y-1.5"
@@ -33,7 +32,6 @@ const NavbarMobile = () => {
                       navbarOpen ? "-rotate-45 delay-200" : "translate-y-1.5"
                   }`}
                   ></span>
-              </div>
             </button>
         <div className="flex-1 flex justify-center space-x-2">
         <Link className="flex items-center space-x-2" href="/">
